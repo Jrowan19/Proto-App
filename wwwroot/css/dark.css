@@ -1,0 +1,53 @@
+body {
+    background-color: #181A1B;
+}
+
+p {
+    color: #FFF;
+}
+
+.card {
+    background-color: #181A1B;
+    border-radius: 10px;
+    box-shadow: 0 13px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+}
+
+label {
+    color: #fff
+}
+
+h1 {
+    color: #fff
+}
+
+.nav-bg {
+    border-bottom: 1px solid greenyellow;
+    background: #181A1B
+}
+
+table#formTable.dataTable tbody tr td {
+    background-color: #181A1B;
+    color: #fff;
+}
+
+table#formTable.dataTable td {
+    border: 2px solid red !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    color: #fff
+}
+
+.dataTables_length select  {
+    color: #ffffff;
+}
+
+.dataTables_info {
+    color : #ffffff
+}
+
+.dataTables_length option {
+    background: #181A1B
+}

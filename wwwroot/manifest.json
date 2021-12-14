@@ -1,0 +1,19 @@
+{
+  "name": "Johns Proto App",
+  "short_name": "Proto App",
+  "background_color": "crimson",
+  "theme_color": "#00897b",
+  "description": "Johns Proto App using .NET6 with Razor Pages",
+  "display": "standalone",
+  "start_url": "./information",
+  "icons": [
+    {
+      "src": "/img/icon192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon512x512.png",
+      "sizes": "512x512"
+    }
+  ]
+}

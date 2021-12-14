@@ -1,0 +1,63 @@
+﻿@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create page";
+}
+
+<div class="card2 col-6 mx-auto">
+    <form method="post" style="background: rgba(1, 1, 1, 0.7); border-radius: 10px;" class="p-4">
+        <div class="card-header bg-info lead fw-bold text-white " style="border-radius: 0.25em;">
+            Create
+        </div>
+        <div style="border-radius: 0.25em">
+            <div class="row m-2 mt-5 ">
+                <div class="col-2 ms-auto">
+                    <label class="text-info fw-bold">Name</label>
+                </div>
+                <div class="col-4 me-auto ">
+                    <input asp-for="Timesheets.Name" class="form-control" placeholder="Name.." />
+                    <span asp-validation-for="Timesheets.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="col-2 ms-auto">
+                    <label class="text-info fw-bold">Date</label>
+                </div>
+                <div class="col-4 me-auto">
+                    <input asp-for="Timesheets.DateWorked" class="form-control" type="date" />
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="col-2 ms-auto">
+                    <label class="text-info fw-bold">Notes</label>
+                </div>
+                <div class="col-4 me-auto">
+                    <input asp-for="Timesheets.Notes" class="form-control" placeholder="Notes..." />
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="col-2 ms-auto">
+                    <label class="text-info fw-bold " style="font-weight:bold">Choose a Category</label>
+                </div>
+                <div class="col-4 me-auto">
+                    <select class=" form-select" asp-items="@(new SelectList(Model.Categories, "Categories", "Categories"))" asp-for="Timesheets.Category">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class=" text-center mx-auto col-6">
+                <button class="btn btn-info mx-auto my-3 fw-bold text-white me-2" style="border-radius: 12px" type="submit"><i class="fas fa-paper-plane text-white me-1"></i>Create</button>
+                <a asp-page="Index" class="btn btn-warning mx-auto my-3 fw-bold text-white me-2" style="border-radius: 12px"><i class="fas fa-hand-point-left text-white me-1"></i>Go Back</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@*Client Side Validation*@
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/script.js"></script>
+}

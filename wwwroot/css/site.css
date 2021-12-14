@@ -1,0 +1,56 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.nav-bg {
+    border-bottom: 1px solid greenyellow; 
+    background: #000032
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 13px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+}
+
+.nav-image {
+    background-image: url('https://images.unsplash.com/photo-1612574935301-af13ccce9258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YW1idWxhbmNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+}
+
+
+.card1 {
+    background-image: url('https://images.unsplash.com/photo-1612574935301-af13ccce9258?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YW1idWxhbmNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    border-radius: 10px;
+    box-shadow: 0 13px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card2 {
+    background-image: url('https://careers.secamb.nhs.uk/wp-content/uploads/2020/01/Whitstable-50.jpg');
+    border-radius: 10px;
+    box-shadow: 0 13px 30px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link:hover {    
+    border-bottom: greenyellow 1px solid
+}
+
+.table-border {
+    border: 2px solid #000032 !important
+}

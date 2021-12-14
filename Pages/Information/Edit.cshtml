@@ -1,0 +1,57 @@
+﻿@page
+@model EditModel
+@{
+    ViewData["Title"] = "Edit page";
+}
+
+
+
+<div class="card1 col-6 mx-auto">
+    <form method="post" style="background: rgba(1, 1, 1, 0.7); border-radius: 10px;" class="p-4">
+        <input asp-for="Timesheets.Id" hidden />
+        <div class="card-header lead fw-bold text-white border border-primary" style="border-radius: 10px; background-color: #78be20 !important">
+            Edit
+        </div>
+
+        <div class="row mt-4 mb-2 ">
+            <div class="col-2 ms-auto ">
+                <label class="fw-bold text-white text-end">Name</label>
+            </div>
+            <div class="col-4 me-auto ">
+                <input asp-for="Timesheets.Name" class="form-control" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-2 ms-auto">
+                <label class="fw-bold text-white">Date</label>
+            </div>
+            <div class="col-4 me-auto">
+                <input asp-for="Timesheets.DateWorked" class="form-control" type="date" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-2 ms-auto">
+                <label class="fw-bold text-white">Notes</label>
+            </div>
+            <div class="col-4 me-auto">
+                <input asp-for="Timesheets.Notes" class="form-control" />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-2 ms-auto">
+                <label class="text-white fw-bold ">Choose a Category</label>
+            </div>
+            <div class="col-4 me-auto">
+                <select class=" form-select" asp-items="@(new SelectList(Model.Categories, "Categories", "Categories"))" asp-for="Timesheets.Category">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class=" btn btn-primary mx-auto mt-3 me-2" type="submit" style="background-color: #78be20 !important"><i class="fas fa-edit me-1"></i>Update </button>
+            <a asp-page="Index" class="btn btn-secondary mt-3 border border-primary"><i class="fas fa-hand-point-left text-white me-1"></i>Go Back</a>
+        </div>
+    </form>
+</div>
+
+
